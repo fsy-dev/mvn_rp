@@ -2,13 +2,13 @@
     <parent>
         <groupId>com.burningrain.example</groupId>
         <artifactId>RESTfulExample</artifactId>
-        <version>1.0</version>
+        <version>1.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>web-module</artifactId>
 
     <packaging>war</packaging>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <name>${project.parent}-${project.artifactId}</name>
     <url>http://maven.apache.org</url>
 
@@ -17,7 +17,7 @@
         <dependency>
             <groupId>com.burningrain.example</groupId>
             <artifactId>core</artifactId>
-            <version>1.0</version>
+            <version>1.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
