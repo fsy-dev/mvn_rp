@@ -1,0 +1,151 @@
+body
+{
+	background-color: #1C1F22; 
+}
+
+.center {
+    width:  350px;
+    margin: 0 auto;
+}
+
+
+
+#mask {
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:#000;
+    display:none;
+    }
+#boxes .window {
+    position:absolute;
+    left:0;
+    top:0px;
+    -top: 40px;
+    width:440px;
+    height:200px;
+    display:none;
+    z-index:9999;
+    padding: 20px;
+    overflow: hidden;
+	
+    }  
+#boxes #dialog {
+    width:375px; 
+    height:160px;
+    padding:10px;
+    background-color:#ffffff;
+	background: #31373E;
+    }
+
+#boxes #victory {
+    width:375px;
+    height:140px;
+    padding:10px;
+    background-color:#ffffff;
+    background: #31373E;
+}
+
+#boxes #fail {
+    width:375px;
+    height:140px;
+    padding:10px;
+    background-color:#ffffff;
+    background: #31373E;
+}
+
+#boxes #enemyLeft {
+    width:375px;
+    height:140px;
+    padding:10px;
+    background-color:#ffffff;
+    background: #31373E;
+}
+
+.top {
+    position:absolute;
+    left:0;
+    top:0;
+    width:375px;
+    height:30px;
+    background: #BF3030;
+    padding: 8px 20px 6px 10px;
+    }
+
+.v {
+    background: green !important;
+}
+
+.close {
+    float:right;
+    }
+.content {
+    padding-top: 35px;
+	background: #31373E;
+}
+
+.content p {
+	color: #ffffff;
+	text-align: center;		
+}
+
+.content btn btn-danger w{
+    width:100px; 
+	margin:190px;	
+}
+
+select {
+	width: 100%;
+	color: #E4DEDE;
+	background-color:#333333;
+}
+
+
+.panel-heading {
+	 color: #FFFFFF !important;
+	 background-color: #D9534F !important;
+	
+}
+
+.lineBlock {
+   border: 0;  padding: 0;
+ 
+   display: -moz-inline-stack; /* ← Firefox 2 backwards compatibility */
+   display: inline-block;
+   vertical-align: top;
+ 
+   /* ↓ IE6 & IE7 «hasLayout» voodoo */
+   zoom: 1;
+   *display: inline;
+   /* ↑ IE6 & IE7 starhack ← http://www.ejeliot.com/blog/63 */
+}
+
+.pull-right{
+	background-color: #D9534F !important;
+}
+
+.pull-right li:hover{
+	background-color: #d2322d !important;	
+}
+
+.dropp_menu_button{
+/* Первые два свойства нужны чтобы убрать отступы в IE */
+	overflow: visible;
+	width: 100%;
+	/* Убираем отступы */
+	margin: 0;
+	padding: 0;
+	/* Убираем все элементы оформления кнопки */
+	background: none;
+	border: none;
+	/* Обычный для ссылок курсор */
+	cursor: pointer;
+	color: white;
+	
+	text-align: right;
+	padding: .5em 1em .55em;
+		
+}
+
+

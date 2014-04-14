@@ -1,0 +1,142 @@
+@body-background-color: #1C1F22;
+@mask-color: #000000;
+@victory-top-color: green;
+@message-div-background: #31373E;
+@message-div-background-color: #ffffff;
+@main-style-color: #D9534F;
+@main-style-color-active: #d2322d;
+
+
+.message(@height: 160px){
+  width:375px;
+  height:@height;
+  padding:10px;
+  background-color: @message-div-background-color;
+  background: @message-div-background;
+}
+
+body {
+  background-color: @body-background-color;
+}
+
+.center {
+  width:  350px;
+  margin: 0 auto;
+}
+
+
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:@mask-color;
+  display:none;
+}
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0px;
+  -top: 40px;
+  width:440px;
+  height:200px;
+  display:none;
+  z-index:9999;
+  padding: 20px;
+  overflow: hidden;
+
+}
+#boxes #dialog {
+  .message;
+}
+
+#boxes #victory {
+  .message(140px);
+}
+
+#boxes #fail {
+  .message(140px);
+}
+
+#boxes #enemyLeft {
+  .message(140px);
+}
+
+.top {
+  position:absolute;
+  left:0;
+  top:0;
+  width:375px;
+  height:30px;
+  background: @main-style-color-active;
+  padding: 8px 20px 6px 10px;
+}
+
+.v {
+  background: @victory-top-color !important;
+}
+
+.close {
+  float:right;
+}
+.content {
+  padding-top: 35px;
+  background: @message-div-background;
+}
+
+.content p {
+  color: #ffffff;
+  text-align: center;
+}
+
+.content btn btn-danger w{
+  width:100px;
+  margin:190px;
+}
+
+select {
+  width: 100%;
+  color: #E4DEDE;
+  background-color:#333333;
+}
+
+
+.panel-heading {
+  color: @message-div-background-color !important;
+  background-color: @main-style-color !important;
+
+}
+
+.lineBlock {
+  border: 0;  padding: 0;
+
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  display: inline;
+}
+
+.pull-right{
+  background-color: @main-style-color !important;
+}
+
+.pull-right li:hover{
+  background-color: @main-style-color-active !important;
+}
+
+.dropp_menu_button{
+  overflow: visible;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  text-align: right;
+  padding: .5em 1em .55em;
+}
+
+

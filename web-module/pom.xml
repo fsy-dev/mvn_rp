@@ -1,0 +1,112 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.burningrain.example</groupId>
+        <artifactId>RESTfulExample</artifactId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>web-module</artifactId>
+
+    <packaging>war</packaging>
+    <version>${project.parent.version}</version>
+    <name>${project.parent}-${project.artifactId}</name>
+    <url>http://maven.apache.org</url>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.burningrain.example</groupId>
+            <artifactId>core</artifactId>
+            <version>1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-server</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-json</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>RESTfulExample</finalName>
+        <plugins>
+            <plugin>
+                <groupId>com.sun.jersey.contribs</groupId>
+                <artifactId>maven-wadl-plugin</artifactId>
+                <version>1.17</version>
+                <executions>
+                    <execution>
+                        <id>generate</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <phase>compile</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <wadlFile>${project.build.outputDirectory}/application.wadl
+                    </wadlFile>
+                    <formatWadlFile>true</formatWadlFile>
+                    <baseUri>http://localhost:8080/RESTfulExample/rest/</baseUri>
+                    <packagesResourceConfig>
+                        <param>com.epam.stud.shv.web</param>
+                    </packagesResourceConfig>
+                    <wadlGenerators>
+                        <wadlGeneratorDescription>
+                            <className>com.sun.jersey.server.wadl.generators.WadlGeneratorApplicationDoc
+                            </className>
+                            <properties>
+                                <property>
+                                    <name>applicationDocsFile</name>
+                                    <value>${basedir}/src/main/doc/application-doc.xml</value>
+                                </property>
+                            </properties>
+                        </wadlGeneratorDescription>
+                        <wadlGeneratorDescription>
+                            <className>com.sun.jersey.server.wadl.generators.WadlGeneratorGrammarsSupport
+                            </className>
+                            <properties>
+                                <property>
+                                    <name>grammarsFile</name>
+                                    <value>${basedir}/src/main/doc/application-grammars.xml</value>
+                                </property>
+                            </properties>
+                        </wadlGeneratorDescription>
+                    </wadlGenerators>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.1.1</version>
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+</project>
